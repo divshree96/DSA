@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
         LinkedList list = new LinkedList(5);
+        list.append(2);
         list.getHead();
         list.getTail();
         list.getLength();
