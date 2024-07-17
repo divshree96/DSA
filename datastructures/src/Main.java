@@ -5,9 +5,14 @@ public class Main {
         System.out.println("Hello and welcome!");
         LinkedList list = new LinkedList(5);
         list.append(2);
+//        list.append(10);
+//        list.append(6);
         list.getHead();
         list.getTail();
         list.getLength();
         list.printList();
+        System.out.println("Remove last from the list " + list.removeLast().value);
+        System.out.println("Remove last from the list " + list.removeLast().value);
+        System.out.println("Remove last from the list " + list.removeLast());
     }
 }
