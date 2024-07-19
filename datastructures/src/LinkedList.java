@@ -58,6 +58,33 @@ public class LinkedList {
         return temp;
     }
 
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if(length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
+    public Node removeFirst() {
+        if(length == 0) return null;
+
+        Node x = head;
+        head = head.next;
+        x.next = null;
+        length--;
+
+        if(length == 0) {
+            tail = null;
+        }
+
+        return x;
+    }
+
     public void getHead() {
         System.out.println("Head is " + head.value);
     }
