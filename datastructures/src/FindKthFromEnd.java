@@ -111,4 +111,24 @@ public class FindKthFromEnd {
 
         return slow;
     }
+
+    public Node myApproach(int k) {
+        int length = 0;
+        Node temp = head;
+
+        while(temp != null) {
+            length++;
+            temp = temp.next;
+        }
+
+        if(k>length) return null;
+
+        int index = length-k;
+        temp = head;
+
+        for(int i=0; i<index; i++){
+            temp = temp.next;
+        }
+        return temp;
+    }
 }

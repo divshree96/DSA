@@ -12,6 +12,10 @@ public class Main {
         System.out.println(list.findKthFromEnd(2).value);
         System.out.println(list.findKthFromEnd(5).value);
         System.out.println(list.findKthFromEnd(6));
+
+        System.out.println(list.myApproach(2).value);
+        System.out.println(list.myApproach(5).value);
+        System.out.println(list.myApproach(6));
 //        LinkedList list = new LinkedList(1);
 //        list.append(2);
 //        list.append(3);
