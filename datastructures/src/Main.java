@@ -3,13 +3,22 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
-        LinkedList list = new LinkedList(1);
+        FindKthFromEnd list = new FindKthFromEnd(1);
         list.append(2);
         list.append(3);
         list.append(4);
-        list.printList();
-        list.reverse();
-        list.printList();
+        list.append(5);
+
+        System.out.println(list.findKthFromEnd(2).value);
+        System.out.println(list.findKthFromEnd(5).value);
+        System.out.println(list.findKthFromEnd(6));
+//        LinkedList list = new LinkedList(1);
+//        list.append(2);
+//        list.append(3);
+//        list.append(4);
+//        list.printList();
+//        list.reverse();
+//        list.printList();
 //        System.out.println("Get 0 : " + list.get(0).value);
 //        System.out.println("Get 1 : " + list.get(1).value);
 //        System.out.println("Get 2 : " + list.get(2).value);
