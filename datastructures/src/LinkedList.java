@@ -70,6 +70,33 @@ public class LinkedList {
         length++;
     }
 
+    public Node removeFirst() {
+        if(length == 0) return null;
+
+        Node x = head;
+        head = head.next;
+        x.next = null;
+        length--;
+
+        if(length == 0) {
+            tail = null;
+        }
+
+        return x;
+    }
+
+    public Node get(int index) {
+        if(index < 0 || index>=length) return null;
+        Node temp = head;
+
+        for(int i=0; i<index; i++) {
+            temp = temp.next;
+        }
+
+        return temp;
+
+    }
+
     public boolean set(int index, int value) {
         Node temp = get(index);
         if(temp!= null) {
@@ -100,31 +127,17 @@ public class LinkedList {
         return true;
     }
 
-    public Node removeFirst() {
-        if(length == 0) return null;
+    public Node remove(int index) {
+        if(index<0 || index>= length) return null;
+        if(index == 0) return removeFirst();
+        if(index == length-1) return removeLast();
 
-        Node x = head;
-        head = head.next;
-        x.next = null;
+        Node prev = get(index-1);
+        Node temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
         length--;
-
-        if(length == 0) {
-            tail = null;
-        }
-
-        return x;
-    }
-
-    public Node get(int index) {
-        if(index < 0 || index>=length) return null;
-        Node temp = head;
-
-        for(int i=0; i<index; i++) {
-            temp = temp.next;
-        }
-
         return temp;
-
     }
 
     public void getHead() {
