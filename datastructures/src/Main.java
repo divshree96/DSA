@@ -4,15 +4,29 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
 
-        LLHasLoop list = new LLHasLoop(1);
-        list.append(2);
-        list.append(3);
-        list.append(4);
-        list.append(5);
+        LLRemoveDuplicates myLinkedList = new LLRemoveDuplicates(1);
 
-        // create a loop by connecting the tail to the second node
-        list.getTail().next = list.getHead().next;
-        System.out.println(list.hasLoop());
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(3);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+
+        myLinkedList.removeDuplicates();
+
+        myLinkedList.printList();
+
+//        LLHasLoop list = new LLHasLoop(1);
+//        list.append(2);
+//        list.append(3);
+//        list.append(4);
+//        list.append(5);
+//
+//        // create a loop by connecting the tail to the second node
+//        list.getTail().next = list.getHead().next;
+//        System.out.println(list.hasLoop());
 
 //        FindKthFromEnd list = new FindKthFromEnd(1);
 //        list.append(2);
