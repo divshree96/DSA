@@ -3,13 +3,17 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
-        LinkedList list = new LinkedList(1);
-        list.append(2);
-        list.append(3);
-        System.out.println("Get 0 : " + list.get(0).value);
-        System.out.println("Get 1 : " + list.get(1).value);
-        System.out.println("Get 2 : " + list.get(2).value);
-        System.out.println("Get null : " + list.get(3));
+        LinkedList list = new LinkedList(11);
+        list.append(5);
+        list.append(23);
+        list.append(7);
+        list.printList();
+        list.set(1, 4);
+        list.printList();
+//        System.out.println("Get 0 : " + list.get(0).value);
+//        System.out.println("Get 1 : " + list.get(1).value);
+//        System.out.println("Get 2 : " + list.get(2).value);
+//        System.out.println("Get null : " + list.get(3));
 //        System.out.println(STR."Removed \{list.removeFirst().value}");
 //        list.printList();
 //        System.out.println(STR."Removed \{list.removeFirst().value}");
