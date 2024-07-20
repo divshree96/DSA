@@ -3,12 +3,12 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
-        LinkedList list = new LinkedList(11);
+        LinkedList list = new LinkedList(1);
+        list.append(2);
         list.append(3);
-        list.append(23);
-        list.append(7);
+        list.append(4);
         list.printList();
-        list.remove(2);
+        list.reverse();
         list.printList();
 //        System.out.println("Get 0 : " + list.get(0).value);
 //        System.out.println("Get 1 : " + list.get(1).value);
