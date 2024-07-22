@@ -5,10 +5,20 @@ public class Main {
         System.out.println("Hello and welcome!");
 
         DoublyLinkedList dll = new DoublyLinkedList(5);
-        dll.getHead();
-        dll.getTail();
-        dll.getLength();
+        dll.append(4);
+        dll.append(3);
         dll.printList();
+        System.out.println("Remove Last node : " + dll.removeLast().value);
+        dll.printList();
+        System.out.println("-----------------");
+        dll.prepend(10);
+        dll.printList();
+        System.out.println("Remove first Node : " + dll.removeFirst().value);
+        dll.printList();
+//        dll.getHead();
+//        dll.getTail();
+//        dll.getLength();
+
 
 //        LinkedList myLinkedList = new LinkedList(10);
 //        myLinkedList.append(21);
