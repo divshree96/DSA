@@ -4,17 +4,25 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
 
-        DoublyLinkedList dll = new DoublyLinkedList(5);
-        dll.append(4);
+        DoublyLinkedList dll = new DoublyLinkedList(1);
+        dll.append(2);
         dll.append(3);
-        dll.printList();
-        System.out.println("Remove Last node : " + dll.removeLast().value);
-        dll.printList();
-        System.out.println("-----------------");
-        dll.prepend(10);
-        dll.printList();
-        System.out.println("Remove first Node : " + dll.removeFirst().value);
-        dll.printList();
+        dll.append(4);
+        dll.append(5);
+        dll.append(6);
+        dll.append(7);
+        System.out.println("Get 1 : " + dll.get(1).value);
+        System.out.println("Get 5 : " + dll.get(5).value);
+        //dll.printList();
+
+
+//        System.out.println("Remove Last node : " + dll.removeLast().value);
+//        dll.printList();
+//        System.out.println("-----------------");
+//        dll.prepend(10);
+//        dll.printList();
+//        System.out.println("Remove first Node : " + dll.removeFirst().value);
+//        dll.printList();
 //        dll.getHead();
 //        dll.getTail();
 //        dll.getLength();
