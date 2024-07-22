@@ -4,17 +4,23 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
 
-        LinkedList myLinkedList = new LinkedList(10);
-        myLinkedList.append(21);
-        myLinkedList.append(13);
-        myLinkedList.append(8);
-        myLinkedList.append(9);
-        myLinkedList.append(7);
-        myLinkedList.printList();
-        System.out.println("____________________________________");
-        //myLinkedList.reverseBetween(1, 3);
-        myLinkedList.partitionList(5);
-        myLinkedList.printList();
+        DoublyLinkedList dll = new DoublyLinkedList(5);
+        dll.getHead();
+        dll.getTail();
+        dll.getLength();
+        dll.printList();
+
+//        LinkedList myLinkedList = new LinkedList(10);
+//        myLinkedList.append(21);
+//        myLinkedList.append(13);
+//        myLinkedList.append(8);
+//        myLinkedList.append(9);
+//        myLinkedList.append(7);
+//        myLinkedList.printList();
+//        System.out.println("____________________________________");
+//        //myLinkedList.reverseBetween(1, 3);
+//        myLinkedList.partitionList(5);
+//        myLinkedList.printList();
 
 //        LLRemoveDuplicates myLinkedList = new LLRemoveDuplicates(1);
 //
