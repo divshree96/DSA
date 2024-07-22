@@ -164,6 +164,7 @@ public class DoublyLinkedList {
         temp.next = null;
         temp.prev = null;
 
+        length--;
         return temp;
     }
 }
