@@ -4,19 +4,31 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
 
-        LLRemoveDuplicates myLinkedList = new LLRemoveDuplicates(1);
-
-        myLinkedList.append(1);
-        myLinkedList.append(2);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(3);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-
-        myLinkedList.removeDuplicates();
-
+        LinkedList myLinkedList = new LinkedList(10);
+        myLinkedList.append(21);
+        myLinkedList.append(13);
+        myLinkedList.append(8);
+        myLinkedList.append(9);
+        myLinkedList.append(7);
         myLinkedList.printList();
+        System.out.println("____________________________________");
+        //myLinkedList.reverseBetween(1, 3);
+        myLinkedList.partitionList(5);
+        myLinkedList.printList();
+
+//        LLRemoveDuplicates myLinkedList = new LLRemoveDuplicates(1);
+//
+//        myLinkedList.append(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//        myLinkedList.append(3);
+//        myLinkedList.append(3);
+//        myLinkedList.append(4);
+//
+//        myLinkedList.removeDuplicates();
+//
+//        myLinkedList.printList();
 
 //        LLHasLoop list = new LLHasLoop(1);
 //        list.append(2);

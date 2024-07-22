@@ -155,6 +155,75 @@ public class LinkedList {
         }
     }
 
+    public void partitionList(int x) {
+        if(head == null) return;
+        if(length == 1) return;
+
+        Node less = null;
+        Node lessHead = less;
+
+        Node more = null;
+        Node moreHead = more;
+
+        Node temp = head;
+
+        for(int i=0; i<length; i++) {
+            if(temp.value < x) {
+                if(less == null) {
+                    less = temp;
+                    lessHead = temp;
+                } else {
+                    less.next = temp;
+                    less = less.next;
+                }
+            } else {
+                if(more == null) {
+                    more = temp;
+                    moreHead = temp;
+                } else {
+                    more.next = temp;
+                    more = more.next;
+                }
+            }
+            temp = temp.next;
+        }
+        if(less != null && more !=null) {
+            less.next = moreHead;
+            more.next = null;
+            head = lessHead;
+        }
+    }
+
+    public Node[] reverse(Node dHead, Node dTail, int index) {
+        Node temp = dHead;
+        dHead = dTail;
+        dTail = temp;
+
+        Node after = temp;
+        Node before = null;
+
+        for(int i=0; i<=index; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+
+        return new Node[]{dHead, dTail};
+    }
+
+    public void reverseBetween(int m, int n) {
+        Node previous = get(m-1);
+        Node after = get(n+1);
+
+        Node dHead = get(m);
+        Node dTail = get(n);
+        Node[] result = reverse(dHead, dTail, n-m);
+
+        previous.next = result[0];
+        result[1].next = after;
+    }
+
     public void getHead() {
         System.out.println("Head is " + head.value);
     }
