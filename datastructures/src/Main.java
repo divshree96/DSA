@@ -11,7 +11,7 @@ public class Main {
         dll.append(5);
         dll.printList();
         System.out.println("--------");
-        dll.insert(3, 20);
+        dll.remove(3);
         dll.printList();
 
 
