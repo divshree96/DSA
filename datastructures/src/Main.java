@@ -11,9 +11,10 @@ public class Main {
         dll.append(5);
         dll.append(6);
         dll.append(7);
-        System.out.println("Get 1 : " + dll.get(1).value);
-        System.out.println("Get 5 : " + dll.get(5).value);
-        //dll.printList();
+        dll.printList();
+        System.out.println("--------");
+        dll.set(1, 20);
+        dll.printList();
 
 
 //        System.out.println("Remove Last node : " + dll.removeLast().value);
