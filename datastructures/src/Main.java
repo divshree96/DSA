@@ -9,11 +9,9 @@ public class Main {
         dll.append(3);
         dll.append(4);
         dll.append(5);
-        dll.append(6);
-        dll.append(7);
         dll.printList();
         System.out.println("--------");
-        dll.set(1, 20);
+        dll.insert(3, 20);
         dll.printList();
 
 
