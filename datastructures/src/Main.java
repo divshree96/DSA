@@ -6,18 +6,20 @@ public class Main {
 
         DoublyLinkedList dll = new DoublyLinkedList(1);
         dll.append(2);
-        dll.append(3);
-        dll.append(4);
-        dll.append(5);
+//        dll.append(3);
+//        dll.append(4);
+//        dll.append(5);
+//        dll.append(1);
         dll.printList();
-        System.out.println("--------");
-        dll.remove(3);
+        System.out.println("-----------------");
+//        System.out.println("Palindrome : " + dll.isPalindrome());
+        dll.swapPairs();
         dll.printList();
 
 
 //        System.out.println("Remove Last node : " + dll.removeLast().value);
 //        dll.printList();
-//        System.out.println("-----------------");
+//
 //        dll.prepend(10);
 //        dll.printList();
 //        System.out.println("Remove first Node : " + dll.removeFirst().value);

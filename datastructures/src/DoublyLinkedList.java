@@ -167,4 +167,60 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    public void reverse() {
+        Node current = head;
+        Node temp = null;
+
+        while(current != null) {
+            temp = current.prev;
+            current.prev = current.next;
+            current.next = temp;
+            current = current.prev;
+        }
+
+        temp = head;
+        head = tail;
+        tail = temp;
+    }
+
+    public boolean isPalindrome() {
+        if(length == 0 || length == 1) return true;
+
+        Node temp = head;
+        Node temp1 = tail;
+
+        for(int i=0; i<length/2; i++) {
+            System.out.println("Comparing : " + temp.value + " and " + temp1.value);
+            if(temp.value == temp1.value) {
+                temp = temp.next;
+                temp1 = temp1.prev;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void swapPairs() {
+        if(length<=1) return;
+
+        Node temp = head;
+        head = head.next;
+        for(int i=0; i<length/2; i++) {
+            Node x = temp.next.next;
+            temp.next.next = temp;
+            temp.next.prev = temp.prev;
+            temp.prev = temp.next;
+            temp.next = x;
+
+            if(x !=null) {
+                x.prev = temp;
+                temp = x;
+            } else {
+                temp.prev.prev.next = temp.prev;
+            }
+        }
+        tail = temp;
+    }
 }
