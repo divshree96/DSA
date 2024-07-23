@@ -4,17 +4,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
 
-        DoublyLinkedList dll = new DoublyLinkedList(1);
-        dll.append(2);
+
+
+//        DoublyLinkedList dll = new DoublyLinkedList(1);
+//        dll.append(2);
 //        dll.append(3);
 //        dll.append(4);
 //        dll.append(5);
 //        dll.append(1);
-        dll.printList();
-        System.out.println("-----------------");
+//        dll.printList();
+//        System.out.println("-----------------");
 //        System.out.println("Palindrome : " + dll.isPalindrome());
-        dll.swapPairs();
-        dll.printList();
+//        dll.swapPairs();
+//        dll.printList();
 
 
 //        System.out.println("Remove Last node : " + dll.removeLast().value);
