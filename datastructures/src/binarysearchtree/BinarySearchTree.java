@@ -12,4 +12,8 @@ public class BinarySearchTree {
             this.value = value;
         }
     }
+
+    public void insert(int value) {
+        Node node = new Node(value);
+    }
 }
