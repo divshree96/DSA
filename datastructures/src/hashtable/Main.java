@@ -9,6 +9,10 @@ public class Main {
 
         ht.set("bolts", 200);
         ht.set("screws", 140);
-        ht.printTable();
+
+        System.out.println(ht.get("screws")); //140
+        System.out.println(ht.get("lumber")); //80
+        System.out.println(ht.get("rubber")); //0
+        //ht.printTable();
     }
 }
