@@ -10,7 +10,10 @@ public class Main {
         bst.insert(52);
         bst.insert(82);
         bst.insert(27);
-
-        System.out.println(bst.root.left.right.value);
+        System.out.println(bst.contains(27));
+        System.out.println(bst.contains(47));
+        System.out.println(bst.contains(21));
+        System.out.println(bst.contains(2));
+        //System.out.println(bst.root.left.right.value);
     }
 }
