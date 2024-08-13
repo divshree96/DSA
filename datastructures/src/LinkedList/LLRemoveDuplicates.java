@@ -1,13 +1,10 @@
-/*
-You are required to use Floyd's cycle-finding algorithm (also known as the "tortoise and the hare" algorithm) to detect the loop.
+package LinkedList;
 
-This algorithm uses two pointers: a slow pointer and a fast pointer. The slow pointer moves one step at a time,
-while the fast pointer moves two steps at a time. If there is a loop in the linked list, the two pointers will
-eventually meet at some point. If there is no loop, the fast pointer will reach the end of the list.
- */
-public class LLHasLoop {
+import java.util.HashSet;
+import java.util.Set;
+
+public class LLRemoveDuplicates {
     private Node head;
-    private Node tail;
     private int length;
 
     class Node {
@@ -19,19 +16,14 @@ public class LLHasLoop {
         }
     }
 
-    public LLHasLoop(int value) {
+    public LLRemoveDuplicates(int value) {
         Node newNode = new Node(value);
         head = newNode;
-        tail = newNode;
         length = 1;
     }
 
     public Node getHead() {
         return head;
-    }
-
-    public Node getTail() {
-        return tail;
     }
 
     public int getLength() {
@@ -49,10 +41,8 @@ public class LLHasLoop {
     public void printAll() {
         if (length == 0) {
             System.out.println("Head: null");
-            System.out.println("Tail: null");
         } else {
             System.out.println("Head: " + head.value);
-            System.out.println("Tail: " + tail.value);
         }
         System.out.println("Length:" + length);
         System.out.println("\nLinked List:");
@@ -65,33 +55,39 @@ public class LLHasLoop {
 
     public void makeEmpty() {
         head = null;
-        tail = null;
         length = 0;
     }
 
     public void append(int value) {
         Node newNode = new Node(value);
-        if (length == 0) {
+        if (head == null) {
             head = newNode;
-            tail = newNode;
         } else {
-            tail.next = newNode;
-            tail = newNode;
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
         }
         length++;
     }
 
-    public boolean hasLoop() {
-        Node slow = head;
-        Node fast = head;
+    public void removeDuplicates() {
+        Set<Integer> set = new HashSet<>();
+        Node prev = head;
+        Node temp = head;
 
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow == fast) {
-                return true;
+        for(int i=0; i<length; i++){
+            if(set.contains(temp.value)) {
+                Node x = temp;
+                prev.next = x.next;
+                temp = x.next;
+                x.next = null;
+            } else {
+                set.add(temp.value);
+                prev = temp;
+                temp = temp.next;
             }
         }
-        return false;
     }
 }

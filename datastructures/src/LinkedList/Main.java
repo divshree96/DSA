@@ -1,3 +1,5 @@
+package LinkedList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -6,7 +8,7 @@ public class Main {
 
 
 
-//        DoublyLinkedList dll = new DoublyLinkedList(1);
+//        LinkedList.LinkedList.DoublyLinkedList dll = new LinkedList.LinkedList.DoublyLinkedList(1);
 //        dll.append(2);
 //        dll.append(3);
 //        dll.append(4);
@@ -31,7 +33,7 @@ public class Main {
 //        dll.getLength();
 
 
-//        LinkedList myLinkedList = new LinkedList(10);
+//        LinkedList.LinkedList myLinkedList = new LinkedList.LinkedList(10);
 //        myLinkedList.append(21);
 //        myLinkedList.append(13);
 //        myLinkedList.append(8);
@@ -43,7 +45,7 @@ public class Main {
 //        myLinkedList.partitionList(5);
 //        myLinkedList.printList();
 
-//        LLRemoveDuplicates myLinkedList = new LLRemoveDuplicates(1);
+//        LinkedList.LLRemoveDuplicates myLinkedList = new LinkedList.LLRemoveDuplicates(1);
 //
 //        myLinkedList.append(1);
 //        myLinkedList.append(2);
@@ -57,7 +59,7 @@ public class Main {
 //
 //        myLinkedList.printList();
 
-//        LLHasLoop list = new LLHasLoop(1);
+//        LinkedList.LLHasLoop list = new LinkedList.LLHasLoop(1);
 //        list.append(2);
 //        list.append(3);
 //        list.append(4);
@@ -67,7 +69,7 @@ public class Main {
 //        list.getTail().next = list.getHead().next;
 //        System.out.println(list.hasLoop());
 
-//        FindKthFromEnd list = new FindKthFromEnd(1);
+//        LinkedList.FindKthFromEnd list = new LinkedList.FindKthFromEnd(1);
 //        list.append(2);
 //        list.append(3);
 //        list.append(4);
@@ -81,7 +83,7 @@ public class Main {
 //        System.out.println(list.myApproach(5).value);
 //        System.out.println(list.myApproach(6));
 
-//        LinkedList list = new LinkedList(1);
+//        LinkedList.LinkedList list = new LinkedList.LinkedList(1);
 //        list.append(2);
 //        list.append(3);
 //        list.append(4);
